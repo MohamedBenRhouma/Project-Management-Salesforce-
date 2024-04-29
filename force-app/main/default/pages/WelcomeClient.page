@@ -1,0 +1,41 @@
+<apex:page standardController="Account" renderAs="pdf">
+ 
+<apex:image id="TOK_Logo" value="https://talanconsulting4-dev-ed.develop.file.force.com/sfc/dist/version/renditionDownload?rendition=ORIGINAL_Png&versionId=068Qy000002xv2j&operationContext=DELIVERY&contentId=05TQy000003CcXd&page=0&d=/a/Qy0000001OUv/jTRktMUStucgR3A6b8BSFDUVDp1KnBxYSBQcdohxSEg&oid=00DQy000005WMQj&dpt=null&viewId=" width="200" height="100%" alt="Talan Logo" />
+ 
+<div style="font-family:sans-serif;"> 
+<h1>Welcome to Talan Family!</h1>
+</div>
+ 
+<div style="font-family:sans-serif;text-align:left;font-size:12pt;">
+<p>Thank you, <b><apex:outputText value=" {!Account.Name}"/></b>, for 
+   becoming a new Client For Talan Company</p>
+ 
+<p>Your account details are:</p>
+ 
+<table>
+<tr><th>Account Name</th>
+    <td><apex:outputText value="{!Account.Name}"/></td>
+    </tr>
+<tr><th>Account Rep</th>
+    <td><apex:outputText value="{!Account.Owner.Name}"/></td>
+    </tr>
+<tr><th>Customer Since</th>
+    <td><apex:outputText value="{0,date,long}">
+        <apex:param value="{!Account.CreatedDate}"/>
+        </apex:outputText></td>
+    </tr>
+</table>
+    
+<p>It's a pleasure to have you on board.  Please do not hesitate to contact us should you have any questions or concerns.</p>
+    
+<p>Sincerely,</p>
+    
+<p><apex:outputText value="{!Account.Owner.Name}"/></p>
+</div>
+
+<div style="font-family:sans-serif;text-align:left;color:#2f5a61;font-size:10pt;"><br/> 10 Rue de l'énergie solaire Impasse N°1 Charguia 1<br/>
+ Tunis 2035 <br/>
+917.302.8426<br/>
+https://talan.com/ <br/> </div>
+    
+</apex:page>

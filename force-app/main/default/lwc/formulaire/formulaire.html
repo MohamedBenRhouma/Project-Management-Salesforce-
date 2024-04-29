@@ -1,0 +1,105 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 04-27-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+
+
+<template>
+
+
+    <div class="box">
+        <div class="borderLine">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000005WMQj"
+                method="POST">
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span>First Name</span>
+                        <input id="first_name" maxlength="40" name="first_name" type="text" required="required" />
+                    </div>
+                    <div class="inputBox">
+                        <span>Last Name</span>
+                        <input id="last_name" maxlength="80" name="last_name" type="text" required="required" />
+                    </div>
+                </div>
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span for="email">Email</span>
+                        <input id="email" maxlength="80" name="email" type="text" required="required" />
+                    </div>
+                    <div class="inputBox">
+                        <span for="company">Company</span>
+                        <input id="company" maxlength="40" name="company" type="text" />
+                    </div>
+                </div>
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span for="00NQy000002RXl8">Job Title</span>
+                        <select id="00NQy000002RXl8" name="00NQy000002RXl8" title="Job Title">
+                            <option value="">--None--</option>
+                            <option value="Member of the Executive Board">Member of the Executive Board</option>
+                            <option value="President, CEO, Vice President">President, CEO, Vice President</option>
+                            <option value="Director, Head of Department">Director, Head of Department</option>
+                            <option value="Manager, Project Manager">Manager, Project Manager</option>
+                            <option value="Officer, Attaché">Officer, Attaché</option>
+                            <option value="Engineer, Technician, Specialist">Engineer, Technician, Specialist</option>
+                            <option value="Assistant">Assistant</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <span>Mobile</span>
+                        <input id="mobile" maxlength="40" name="mobile" type="text" required="required" />
+                    </div>
+                </div>
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span for="00NQy000002Nk7R">Company Email</span>
+                        <input id="00NQy000002Nk7R" name="00NQy000002Nk7R" maxlength="80" type="text" />
+                    </div>
+                    <div class="inputBox">
+                        <span for="company_phone">Company Phone</span>
+                        <input id="company_phone" maxlength="40" name="company_phone" type="text" />
+                    </div>
+                    <div class="inputBox">
+                        <span for="00NQy000002h5WL">Communication Language</span>
+                        <select id="00NQy000002h5WL" name="00NQy000002h5WL" title="Communication Language">
+                            <option value="">--None--</option>
+                            <option value="French">French</option>
+                            <option value="English">English</option>
+                            <option value="Spanish">Spanish</option>
+                            <option value="German">German</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span>State/Province</span>
+                        <input id="state" maxlength="20" name="state" type="text" />
+                    </div>
+                    <div class="inputBox">
+                        <span for="city">City</span>
+                        <input id="city" maxlength="40" name="city" type="text" />
+                    </div>
+                </div>
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span>Street</span>
+                        <input id="street" name="street" maxlength="40" type="text" />
+                    </div>
+                    <div class="inputBox">
+                        <span for="zip">Zip</span>
+                        <input id="zip" maxlength="20" name="zip" type="text" />
+                    </div>
+                    <div class="inputBox">
+                        <span>Country</span>
+                        <input id="country" maxlength="40" name="country" type="text" />
+                    </div>
+                </div>
+                <button type="submit" name="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,130 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 04-26-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <lightning-modal-header label={postname}></lightning-modal-header>
+    <lightning-modal-body>
+        <template if:true={submitted}>
+            <div class="slds-p-around_large slds-size_1-of-1">
+                <!-- Adjust font size with SLDS class -->
+                <div class="slds-text-heading_medium">
+                    Your form has been successfully submitted. Please check your email for a confirmation message. You
+                    will have a test to take within 48 hours.
+                </div>
+            </div>
+        </template>
+        <template if:false={submitted}>
+            <!-- Display the form -->
+            <lightning-tabset variant="scoped">
+                <lightning-tab label="Application">
+                    <form
+                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000005WMQj"
+                        method="POST" onsubmit={handleSubmit}>
+
+                        <input type=hidden name="oid" value="00DQy000005WMQj">
+                        <input type=hidden name="retURL" value="http://">
+
+                        <div class="slds-grid slds-wrap">
+                            <!-- Column 1 -->
+                            <div class="slds-col slds-size_1-of-2">
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="FirstName"
+                                        style="color: #005290;">First
+                                        Name *:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="FirstName" type="text" name="FirstName"
+                                            maxlength="20" style="padding: 0.2rem 0.5rem;" required>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="LastName" style="color: #005290;">Last
+                                        Name *:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="LastName" type="text" name="LastName"
+                                            maxlength="20" style="padding: 0.2rem 0.5rem;" required>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="Email" style="color: #005290;">Email
+                                        *:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="Email" type="text" name="Email" maxlength="40"
+                                            style="padding: 0.2rem 0.5rem;" required>
+                                        <!-- Display error message if any -->
+                                        <div class="slds-form-element__help" if:true={errorEmail}>{errorEmail}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Column 2 -->
+                            <div class="slds-col slds-size_1-of-2" style="padding-left: 10px;">
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="MobilePhone"
+                                        style="color: #005290;">Mobile
+                                        Phone *:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="MobilePhone" type="text" name="MobilePhone"
+                                            maxlength="20" style="padding: 0.2rem 0.5rem;" required>
+                                        <!-- Display error message if any -->
+                                        <div class="slds-form-element__help" if:true={errorPhone}>{errorPhone}</div>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="JobTitle" style="color: #005290;">Job
+                                        Title:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="JobTitle" type="text" name="JobTitle"
+                                            maxlength="20" style="padding: 0.2rem 0.5rem;">
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="Company"
+                                        style="color: #005290;">Company:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="Company" type="text" name="Company" maxlength="20"
+                                            style="padding: 0.2rem 0.5rem;">
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="CompanyEmail"
+                                        style="color: #005290;">Company
+                                        Email:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="CompanyEmail" type="text" name="CompanyEmail"
+                                            maxlength="40" style="padding: 0.2rem 0.5rem;">
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="CompanyPhone"
+                                        style="color: #005290;">Company
+                                        Phone:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="CompanyPhone" type="text" name="CompanyPhone"
+                                            maxlength="20" style="padding: 0.2rem 0.5rem;">
+                                    </div>
+                                </div>
+                                <div class="slds-form-element slds-m-bottom_small">
+                                    <label class="slds-form-element__label" for="CompanyAddress"
+                                        style="color: #005290;">Company
+                                        Address:</label>
+                                    <div class="slds-form-element__control">
+                                        <input class="slds-input" id="CompanyAddress" type="text" name="CompanyAddress"
+                                            maxlength="100" style="padding: 0.2rem 0.5rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <lightning-modal-footer>
+                            <button class="slds-button slds-button_brand" type="submit" name="submit"
+                                style="background-color: #005290; border: none;">Soumettre</button>
+                        </lightning-modal-footer>
+                    </form>
+                </lightning-tab>
+            </lightning-tabset>
+        </template>
+    </lightning-modal-body>h
+
+</template>
