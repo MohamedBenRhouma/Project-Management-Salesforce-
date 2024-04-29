@@ -98,8 +98,12 @@ export default class DataTabSemiDynamique extends LightningElement {
     recordsToDisplay = [];
 
     connectedCallback() {
+    if (this.columnsStringData) {
         this.columns = JSON.parse(this.columnsStringData);
+    } else {
+        console.log("this.columnsStringData is not defined or empty");
     }
+}
 
     @wire(getObjectInfo, { objectApiName: '$objectAPIName' })
     objectInfo;
