@@ -6,10 +6,10 @@
  * @last modified by  : Mohamed Ben Rhouma
 **/
 public with sharing class AccountListController {
-    /*
-     * Get all accounts.
-     * 
-     */
+    // /*
+    //  * Get all accounts.
+    //  * 
+    //  */
     @AuraEnabled(cacheable=true)
     public static Account getAccountDetails(Id accountId){
         return [SELECT Id, Name, AccountNumber, AnnualRevenue, RecordTypeId,

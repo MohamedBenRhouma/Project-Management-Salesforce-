@@ -1,0 +1,39 @@
+/* customCalendar.css */
+.calendar {
+    font-family: Arial, sans-serif;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day-of-week {
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-date {
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.calendar-date.other-month {
+    color: #999;
+}

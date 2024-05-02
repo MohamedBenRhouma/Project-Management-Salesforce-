@@ -2,7 +2,7 @@
   @description       : 
   @author            : Mohamed Ben Rhouma
   @group             : 
-  @last modified on  : 04-27-2024
+  @last modified on  : 04-29-2024
   @last modified by  : Mohamed Ben Rhouma
 -->
 
@@ -12,8 +12,14 @@
 
     <div class="box">
         <div class="borderLine">
-            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000005WMQj"
+            <form action="//webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQy000005WMQj"
                 method="POST">
+                <input type=hidden name="oid" value="00DQy000005WMQj">
+                <input type=hidden name="retURL" value="https://talanconsulting4-dev-ed.develop.my.site.com/ContactUsTalan/s/
+">
+                <input type="hidden" id="lead_source" maxlength="40" name="lead_source" type="text" required="required"
+                    value="Website" />
+
                 <div class="inputGroup">
                     <div class="inputBox">
                         <span>First Name</span>
@@ -60,7 +66,7 @@
                     </div>
                     <div class="inputBox">
                         <span for="company_phone">Company Phone</span>
-                        <input id="company_phone" maxlength="40" name="company_phone" type="text" />
+                        <input id="00NQy000002Nkdh" maxlength="40" name="00NQy000002Nkdh" type="text" />
                     </div>
                     <div class="inputBox">
                         <span for="00NQy000002h5WL">Communication Language</span>
@@ -71,6 +77,12 @@
                             <option value="Spanish">Spanish</option>
                             <option value="German">German</option>
                         </select>
+                    </div>
+                </div>
+                <div class="inputGroup">
+                    <div class="inputBox">
+                        <span>Website</span>
+                        <input id="url" maxlength="80" name="url" size="20" type="text" />
                     </div>
                 </div>
                 <div class="inputGroup">

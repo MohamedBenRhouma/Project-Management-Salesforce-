@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 05-02-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<!-- customCalendar.html -->
+<template>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button class="prev-month" onclick={goToPreviousMonth}>&#8249;</button>
+            <span class="current-month">{currentMonth}</span>
+            <button class="next-month" onclick={goToNextMonth}>&#8250;</button>
+        </div>
+        <div class="calendar-grid">
+            <template for:each={daysOfWeek} for:item="day">
+                <div key={day} class="day-of-week">{day}</div>
+            </template>
+            <template for:each={calendarDates} for:item="dateObject">
+                <div key={dateObject.date} class={dateObject.class}>{dateObject.day}</div>
+            </template>
+        </div>
+    </div>
+</template>
