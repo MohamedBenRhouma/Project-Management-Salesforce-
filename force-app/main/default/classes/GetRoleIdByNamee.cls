@@ -2,8 +2,8 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 04-12-2024
- * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @last modified on  : 05-02-2024
+ * @last modified by  : Mohamed Ben Rhouma
 **/
 // public with sharing class GetRoleIdByNamee {
 //     public Id getRoleIdByNamee(String roleName) {
