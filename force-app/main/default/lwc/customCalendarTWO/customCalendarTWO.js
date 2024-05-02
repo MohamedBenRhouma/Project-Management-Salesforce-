@@ -1,4 +1,3 @@
-
 // customCalendar.js
 import { LightningElement, track } from 'lwc';
 

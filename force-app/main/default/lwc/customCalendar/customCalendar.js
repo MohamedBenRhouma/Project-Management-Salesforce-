@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 import FullCalendarCustom from '@salesforce/resourceUrl/FullCalendarCustom';
-import FullCalendarJS from '@salesforce/resourceUrl/FullCalendar';
+import FullCalendarJS from '@salesforce/resourceUrl/Fullcalendar';
 import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
 import { NavigationMixin } from "lightning/navigation";
 
