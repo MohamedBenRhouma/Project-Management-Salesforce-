@@ -19,4 +19,4 @@ echo -e 'y/n' | sfdx plugins:install @salesforce/sfdx-scanner
 
 echo "Running SFDX Scanner"
 # Assuming a configuration file is available at 'config/scan-config.json'
-sfdx force:scanner:run -c config/scan-config.json --target "**/default/**" --format "csv" --outfile "sfdxScannerAnalysis.csv" --violations-cause-error
+sfdx scanner:run -c config/scan-config.json --target "**/default/**" --format "csv" --outfile "sfdxScannerAnalysis.csv" --violations-cause-error
