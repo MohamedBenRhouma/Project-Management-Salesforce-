@@ -4,6 +4,7 @@ echo "Installing JDK"
 sudo apt update
 sudo apt install openjdk-11-jdk
 
+
 echo "Installing Node.js 18 using nvm"
 # Install nvm if not already installed
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
