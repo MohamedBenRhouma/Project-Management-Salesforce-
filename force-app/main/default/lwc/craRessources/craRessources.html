@@ -1,0 +1,94 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 05-18-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <lightning-card title={fullInformation} icon-name="standard:timesheet" class="custom-card">
+        <div class="card-content">
+            <div class="employee-details">
+                <p class="detail"><span class="label">Employee Name:</span> {employeeName}</p>
+                <p class="detail"><span class="label">Project Name:</span> {projectName}</p>
+                <p class="detail"><span class="label">Lot Name:</span> {lotName}</p>
+                <p class="detail"><span class="label">Start Date:</span> {startDate}</p>
+                <p class="detail"><span class="label">End Date:</span> {endDate}</p>
+                <!-- <template if:true={showProjectDetails}>
+                   
+                </template> -->
+
+                <div class="datepicker input-group mb-3">
+
+                    <div class="input-group-prepend">
+
+
+                        <span class="input-group-text" id="basic-addon1"><lightning-icon icon-name="utility:date"
+                                size="x-small"></lightning-icon></span>
+                    </div>
+                    <span>Choose The Beginning Day</span>
+                    <lightning-input type="date" name="startDate" onchange={handleStartDateChange} min={startDate}
+                        class="form-control small-datepicker"></lightning-input>
+                    <div class="input-group-append">
+                        <span class="input-group-text">*</span>
+                        <lightning-combobox label="Other" value={selectedType} options={typeOptions}
+                            onchange={handleTypeChange} class="small-picklist"></lightning-combobox>
+                    </div>
+                </div>
+
+
+                <template if:true={showTable}>
+                    <template if:true={isDatePickerSelected}>
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>{projectColumnName}</th>
+                                    <template for:each={timesheetHeaders} for:item="header">
+                                        <th key={header.dayName} class={header.cellClass} scope="col">
+                                            <div>{header.dayName} - {header.formattedDate}</div>
+                                        </th>
+                                    </template>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Project Name" scope="row">{projectName}</td>
+                                    <template for:each={timesheetHeaders} for:item="header">
+                                        <td key={header.dayName} data-label={header.dayName} class={header.cellClass}>
+                                            <template if:true={header.isWeekendOrHoliday}>
+                                                <div class="slds-hide">
+                                                    <lightning-input type="number" min="0" max="1" step="0.5"
+                                                        class="custom-input disabled-input" disabled
+                                                        value="0"></lightning-input>
+                                                </div>
+                                            </template>
+                                            <template if:false={header.isWeekendOrHoliday}>
+                                                <template if:false={header.cellClass}>
+                                                    <lightning-input type="number" min="0" max="1" step="0.5"
+                                                        class="custom-input"></lightning-input>
+                                                </template>
+                                            </template>
+                                        </td>
+                                    </template>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </template>
+                </template>
+            </div>
+
+
+
+            <div class="slds-text-align_center" style="margin-top: 20px;">
+                <div class="slds-docked-form-footer">
+                    <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleSubmit}
+                        class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand-outline" label="Cancel" title="Primary action with lighter look"
+                        onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+
+        </div>
+
+    </lightning-card>
+</template>

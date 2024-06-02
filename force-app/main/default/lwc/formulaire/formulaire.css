@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box {
+    position: relative;
+    width: 600px;
+    height: 1000px;
+    background: transparent;
+    /* Set background to transparent */
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.box::before,
+.box::after,
+.borderLine::before,
+.borderLine::after {
+    content: '';
+        position: absolute;
+        width: 500px;
+        height: 700px;
+        background: linear-gradient(0deg, transparent, transparent, #56fafa, #4cedf9, #c1003a);
+        /* Gradient colors */
+        z-index: 0.1;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+}
+
+.box::before {
+    top: -40%;
+    left: -30%;
+    /* Adjusted position */
+}
+
+.box::after {
+    top: -30%;
+    /* Adjusted position */
+    left: -20%;
+    /* Adjusted position */
+    animation-delay: -3s;
+}
+
+.borderLine::before {
+    top: -20%;
+    /* Adjusted position */
+    left: -10%;
+    /* Adjusted position */
+    animation-delay: -1.5s;
+}
+
+.borderLine::after {
+    top: -10%;
+    /* Adjusted position */
+    left: -5%;
+    /* Adjusted position */
+    animation-delay: -4.5s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: rgba(5, 77, 122, 0.945);
+    /* Semi-transparent dark blue background */
+    padding: 50px 40px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    /* Apply backdrop filter for a frosted glass effect */
+}
+
+.inputGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    position: relative;
+    margin-top: 20px;
+}
+
+.inputBox span {
+    color: #ffffff;
+    font-size: 1em;
+    margin-bottom: 5px;
+    display: block;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.inputBox input,
+.inputBox select {
+    width: 100%;
+    padding: 15px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.inputBox input:focus~span,
+.inputBox input:valid~span,
+.inputBox select:focus~span,
+.inputBox select:valid~span {
+    opacity: 0;
+}
+
+.inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputBox input:focus~i,
+.inputBox input:valid~i,
+.inputBox select:focus~i,
+.inputBox select:valid~i {
+    height: 44px;
+}
+
+.inputBox input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    background-color: #184f85;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.inputBox input[type="submit"]:hover {
+    background-color: #0c7b11 !important;
+}

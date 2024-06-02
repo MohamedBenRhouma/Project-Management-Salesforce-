@@ -1,0 +1,11 @@
+/* customCalendar.css */
+.public-holiday {
+    color: grey;
+}
+
+.non-selectable {
+    pointer-events: none;
+    /* Prevent selecting non-selectable dates */
+    opacity: 0.5;
+    /* Optionally reduce opacity of non-selectable dates */
+}

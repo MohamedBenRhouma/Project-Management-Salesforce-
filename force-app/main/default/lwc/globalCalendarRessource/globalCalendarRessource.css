@@ -1,0 +1,45 @@
+/* globalCalendarRessource.css */
+.calendar {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-row {
+    display: flex;
+}
+
+.calendar-row div {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.prev-month,
+.next-month {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev-month:hover,
+.next-month:hover {
+    color: blue;
+}

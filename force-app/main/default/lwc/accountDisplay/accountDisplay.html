@@ -1,0 +1,71 @@
+<!-- AccountDisplay.html
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="utility:add" alternative-text="Count" title="Opportunity Count"
+                        size="small"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span>Opportunity Count: {opportunityCount}</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning-icon icon-name="utility:currency" alternative-text="Count" title="Opportunity Amount Sum"
+                        size="small"></lightning-icon>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span>Opportunity Amount Sum: {opportunityAmountSum}</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+    </article>
+</template> -->
+<template>
+    <template if:true={opportunityInfo}>
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="utility:add" alternative-text="Count" title="Opportunity Count"
+                            size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span>Opportunity Count</span>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning-button variant="brand-outline" label={opportunityCount} title="Opportunity Count"
+                            class="slds-var-m-left_x-small"></lightning-button>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="utility:currency" alternative-text="Count"
+                            title="Opportunity Amount Sum" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span>Opportunity Amount Sum</span>
+                        </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning-button variant="brand-outline" label={opportunityAmountSum}
+                            title="Opportunity Amount Sum" class="slds-var-m-left_x-small"></lightning-button>
+                    </div>
+                </header>
+            </div>
+        </article>
+    </template>
+</template>

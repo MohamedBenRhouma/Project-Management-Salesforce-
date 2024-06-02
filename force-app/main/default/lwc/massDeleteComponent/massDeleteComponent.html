@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 05-17-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <lightning-card variant="Narrow" title="Calendar" icon-name="standard:date_input">
+
+        <lightning-layout horizontal-align="center">
+            <lightning-layout-item padding="around-small" size="auto">
+                <lightning-combobox label="Month" options={monthOptions} onchange={handleMonthChange}
+                    style="width: 100px;"></lightning-combobox>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small" size="auto">
+                <lightning-combobox label="Year" options={yearOptions} onchange={handleYearChange}
+                    style="width: 100px;"></lightning-combobox>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <div style="height: 300px; margin-top: 10px;">
+            <lightning-datatable key-field="Id" data={calendarData} columns={columns}
+                onrowselection={handleRowSelection} selected-rows={selectedRows}></lightning-datatable>
+        </div>
+
+        <div class="slds-text-align_center" style="margin-top: 40px;">
+
+            <div class="slds-docked-form-footer">
+                <lightning-button variant="destructive" label="Delete Selected Rows" title="Destructive action"
+                    onclick={handleDelete} class="slds-m-right_x-small"></lightning-button>
+                <lightning-button variant="destructive-text" label="Cancel"
+                    title="Destructive action with a lighter look" onclick={handleCancel}
+                    class="slds-m-left_x-small"></lightning-button>
+
+            </div>
+        </div>
+
+
+
+    </lightning-card>
+</template>

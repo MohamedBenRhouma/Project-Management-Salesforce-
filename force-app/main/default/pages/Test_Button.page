@@ -1,0 +1,8 @@
+<apex:page standardController="Calendar__c" extensions="PopulateCalendarBatch" action="{!executeFunction}">
+
+<script>
+
+    window.history.back();
+
+</script>
+</apex:page>

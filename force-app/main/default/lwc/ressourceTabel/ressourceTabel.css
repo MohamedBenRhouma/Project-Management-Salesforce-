@@ -1,0 +1,139 @@
+/* leadList.css */
+:host {
+    display: block;
+    padding: 1rem;
+}
+/* Custom CSS for action buttons */
+.slds-button_view {
+    background-color: #ffffff;
+    border: 1px solid #4a90e2;
+    color: #4a90e2;
+}
+
+.slds-button_modify {
+    background-color: #5cb85c;
+    border: 1px solid #4cae4c;
+    color: #ffffff;
+}
+
+.slds-button_delete {
+    background-color: #d9534f;
+    border: 1px solid #d9534f;
+    color: #ffffff;
+}
+.slds-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.slds-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.slds-table th,
+.slds-table td {
+    border: 1px solid #d8dde6;
+    padding: 0.5rem;
+}
+
+.slds-table th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+    text-align: left;
+}
+
+.slds-table td {
+    text-align: left;
+}
+
+.slds-button-group {
+    margin-top: 1rem;
+}
+
+.slds-button-group .slds-button {
+    margin-right: 0.5rem;
+}
+
+.slds-button_brand:hover {
+    background-color: #4a90e2 !important;
+}
+
+.custom-search-bar {
+    border: 1px solid #d8dde6;
+    border-radius: 4px;
+    padding: 0 0.5rem;
+    transition: border-color 0.3s;
+}
+
+.custom-search-bar:hover {
+    border-color: #0bf044;
+}
+
+.small-search-bar .slds-form-element__control {
+    width: 100%;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.small-button {
+    margin-top: 0.5rem;
+}
+
+.slds-input-icon {
+    position: relative;
+}
+
+.slds-input-icon_right {
+    padding-right: 0.75rem;
+}
+
+.slds-input-icon_right lightning-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.25rem;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.small-button {
+    margin-bottom: 0.5rem;
+}
+.search-container {
+    margin-bottom: 1rem;
+}
+
+/* Style for the search input */
+.custom-search-input {
+   
+    /* Blue border */
+    border-radius: 5px;
+    padding: 0.5rem 0.5rem;
+    /* Add some padding */
+    font-size: 1rem;
+    /* Increase font size */
+    width: 100%;
+    /* Take full width */
+    transition: border-color 0.3s;
+    /* Smooth transition for border color */
+}
+
+.custom-search-input:focus {
+    border-color: #0bf044;
+    /* Change border color on focus */
+}
+
+.custom-search-input::placeholder {
+    color: #999;
+    /* Light gray color for placeholder text */
+}
+
+.error-message {
+    color: #d9534f;
+    /* Red color for error message */
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.slds-button {
+    color: #ffffff !important;
+}

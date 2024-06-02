@@ -1,0 +1,40 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 04-18-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <div class="container">
+        <div class="greeting">
+            Hello, <span class="username">{userName}</span>
+        </div>
+        <div class="clock">
+            <div class="time">
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num hour_num">00</span>
+                        <span class="text">H</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num min_num">00</span>
+                        <span class="text">M</span>
+                    </div>
+                    <span class="colon">:</span>
+                </div>
+                <div class="time-colon">
+                    <div class="time-text">
+                        <span class="num sec_num">00</span>
+                        <span class="text">S</span>
+                    </div>
+                    <span class="am_pm">AM</span>
+                </div>
+            </div>
+        </div>
+        <div class="date">{currentDate}</div>
+    </div>
+</template>

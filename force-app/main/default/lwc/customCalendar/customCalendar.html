@@ -1,0 +1,66 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 05-16-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+  <lightning-card>
+    <div class="calendar-card">
+      <div class="slds-theme_shade slds-box">
+        <div class="slds-grid slds-gutters">
+          <div class="slds-col slds-size_1-of-3">
+            <div class="slds-media slds-no-space slds-grow">
+              <div class="slds-media__figure">
+                <lightning-icon icon-name="standard:event" size="medium"></lightning-icon>
+              </div>
+              <div class="slds-media__body">
+                <p class="slds-line-height_reset">Calendar</p>
+                <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate">{calendarTitle}
+                </h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="slds-col slds-size_2-of-3 slds-clearfix">
+            <div class="slds-float_right slds-p-top_xx-small slds-grid slds-wrap">
+              <div class="slds-m-right_small">
+                <lightning-combobox name="month" label="Month" value={selectedMonth} options={monthOptions}
+                  onchange={handleMonthChange} class="slds-m-horizontal_small" variant="label-hidden">
+                </lightning-combobox>
+              </div>
+              <div class="slds-m-right_small">
+                <lightning-combobox name="year" label="Year" value={selectedYear} options={yearOptions}
+                  onchange={handleYearChange} class="slds-m-horizontal_small" variant="label-hidden">
+                </lightning-combobox>
+              </div>
+
+              <lightning-button label="Previous" variant="neutral" icon-name="utility:chevronleft" icon-position="left"
+                value="previous" onclick={calendarActionsHandler}>
+              </lightning-button>
+
+              <lightning-button label="Next" variant="neutral" icon-name="utility:chevronright" icon-position="right"
+                value="next" onclick={calendarActionsHandler}>
+              </lightning-button>
+
+              <lightning-button label="Today" class="slds-m-horizontal_small" value="today"
+                onclick={calendarActionsHandler}>
+              </lightning-button>
+
+              <lightning-button-menu alternative-text="Show menu" variant="border-filled" icon-name="utility:event"
+                class="slds-m-horizontal_small" menu-alignment="auto" onselect={changeViewHandler}>
+                <template for:each={viewOptions} for:item="menuItem">
+                  <lightning-menu-item key={menuItem.viewName} value={menuItem.viewName} label={menuItem.label}
+                    checked={menuItem.checked}>
+                  </lightning-menu-item>
+                </template>
+              </lightning-button-menu>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fullcalendar"></div>
+  </lightning-card>
+</template>

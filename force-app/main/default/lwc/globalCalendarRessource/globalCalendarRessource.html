@@ -1,0 +1,29 @@
+<!-- globalCalendarRessource.html -->
+<template>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button class="prev-month" onclick={goToPreviousMonth}>&lt;</button>
+            <h2>{currentMonth} {currentYear}</h2>
+            <button class="next-month" onclick={goToNextMonth}>&gt;</button>
+        </div>
+        <div class="calendar-grid">
+            <!-- Weekdays header -->
+            <div class="calendar-row weekdays">
+                <template for:each={weekdays} for:item="weekday">
+                    <div key={weekday} class="weekday">{weekday}</div>
+                </template>
+            </div>
+            <!-- Calendar days -->
+            <template for:each={calendarRows} for:item="row">
+                <div key={row.id} class="calendar-row">
+                    <template for:each={row.days} for:item="day">
+                        <div key={day.id} class={day.classes} onclick={handleDayClick}>
+                            <span class="day-number">{day.number}</span>
+                            <span class="timesheet-indicator"></span> <!-- Placeholder for timesheet data -->
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

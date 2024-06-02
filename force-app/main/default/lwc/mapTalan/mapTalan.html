@@ -1,0 +1,17 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 04-26-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <div class="slds-m-top_small">
+        <template if:true={mapMarkers.length}>
+            <lightning-map map-markers={mapMarkers} zoom-level="14"></lightning-map>
+        </template>
+        <template if:true={error}>
+            <p>Error retrieving map data: {error}</p>
+        </template>
+    </div>
+</template>

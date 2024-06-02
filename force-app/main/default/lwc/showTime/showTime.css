@@ -1,0 +1,63 @@
+.container {
+    max-width: 250;
+    /* Adjust the width as needed */
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+}
+
+.greeting {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    /* Make the text bold */
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time-colon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.time .time-colon .time-text {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: #F0F8FF;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+}
+
+.time .time-colon .time-text .num {
+    font-size: 24px;
+    font-weight: bold;
+    /* Make the text bold */
+}
+
+.time .time-colon .time-text .text {
+    font-size: 12px;
+    font-weight: bold;
+    /* Make the text bold */
+}
+
+.date {
+    font-size: 14px;
+    font-weight: bold;
+    /* Make the text bold */
+}

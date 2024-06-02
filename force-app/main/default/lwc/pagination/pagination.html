@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 04-20-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<!-- <template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="previous" icon-name="utility:chevronleft"
+                onclick={previoushandler}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow">
+            Displaying _of _ page
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="next" icon-name="utility:chevronright" icon-position="right"
+                onclick={nexthandler}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template> -->
+<!-- Pagination.html -->
+<template>
+    <lightning-layout>
+        <template if:true={enablePrevious}>
+            <lightning-layout-item>
+                <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previoushandler}
+                    disabled={disablePrevious}></lightning-button>
+            </lightning-layout-item>
+        </template>
+        <lightning-layout-item flexibility="grow">
+            <p class="slds-text-align_center">Displaying {currentPage} of {totalPage} page</p>
+        </lightning-layout-item>
+        <template if:true={enableNext}>
+            <lightning-layout-item>
+                <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right"
+                    onclick={nexthandler} disabled={disableNext}></lightning-button>
+            </lightning-layout-item>
+        </template>
+    </lightning-layout>
+</template>

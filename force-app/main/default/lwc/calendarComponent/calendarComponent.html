@@ -1,0 +1,68 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 05-17-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <lightning-card title="New Date" icon-name="standard:event" style="width: 50%;">
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title">
+                <button aria-controls="expando-unique-id" aria-expanded="true"
+                    class="slds-button slds-section__title-action">
+                    <!-- <svg class="slds-section__title-action-icon slds-button__icon slds-button__icon_left"
+                        aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                    </svg> -->
+                    <span class="slds-truncate" title="Section Title">Details</span>
+                </button>
+            </h3>
+            <div class="slds-section__content" id="expando-unique-id">
+                <div class="input-field">
+                    <label for="day" class="slds-form-element__label">Day</label>
+                    <select class="slds-select" id="day" onchange={handleDayChange} value={selectedDay}>
+                        <template for:each={dayOptions} for:item="day">
+                            <option key={day.value} value={day.value}>{day.label}</option>
+                        </template>
+                    </select>
+                </div>
+                <div class="input-field1">
+                    <label for="month" class="slds-form-element__label">Month</label>
+                    <select class="slds-select" id="month" onchange={handleMonthChange} value={selectedMonth}>
+                        <template for:each={monthOptions} for:item="month">
+                            <option key={month.value} value={month.value}>{month.label}</option>
+                        </template>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="year" class="slds-form-element__label">Year</label>
+                    <select class="slds-select" id="year" onchange={handleYearChange} value={selectedYear}>
+                        <template for:each={yearOptions} for:item="year">
+                            <option key={year.value} value={year.value}>{year.label}</option>
+                        </template>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="description" class="slds-form-element__label">Description</label>
+                    <div class="description-input">
+                        <lightning-input type="text" id="description"
+                            onchange={handleDescriptionChange}></lightning-input>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <lightning-input type="checkbox" label="Public Holiday" checked={isPublicHoliday}
+                        onchange={handlePublicHolidayChange}></lightning-input>
+                </div>
+            </div>
+            <div class="slds-text-align_center" style="margin-top: 20px;">
+                <div class="slds-docked-form-footer">
+                    <lightning-button variant="brand" label="Save" title="Primary action" onclick={handleSave}
+                        class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand-outline" label="Cancel" title="Primary action with lighter look"
+                        onclick={handleCancel} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

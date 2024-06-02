@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 05-13-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <lightning-card title="Timesheet Approval" icon-name="standard:timesheet">
+        <div class="slds-m-around_medium">
+            <template if:true={timesheetsToApprove}>
+                <lightning-datatable key-field="Id" data={timesheetsToApprove} columns={columns}
+                    onrowaction={handleRowAction} hide-checkbox-column>
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                <p>{error}</p>
+            </template>
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </template>
+        </div>
+    </lightning-card>
+</template>

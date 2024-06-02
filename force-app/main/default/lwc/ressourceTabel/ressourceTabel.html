@@ -1,0 +1,33 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<!--
+  @description       : 
+  @author            : Mohamed Ben Rhouma
+  @group             : 
+  @last modified on  : 04-27-2024
+  @last modified by  : Mohamed Ben Rhouma
+-->
+<template>
+    <lightning-card title="Resource Table">
+        <div class="search-container">
+            <lightning-input class="custom-search-input" type="search" onchange={handleSearchKeyChange}
+                label="Search by name" variant="label-hidden" placeholder="Search..."></lightning-input>
+        </div>
+        <template if:true={resources}>
+
+            <div class="slds-m-around_medium">
+                <lightning-datatable key-field="Id" data={resources} columns={columns}
+                    onrowaction={handleRowAction}></lightning-datatable>
+            </div>
+
+
+
+        </template>
+        <div slot="footer" class="slds-var-m-horizontal_medium">
+            <!-- <c-pagination records={resources} onupdate={UpdateRessourceHandler}></c-pagination> -->
+        </div>
+
+    </lightning-card>
+</template>

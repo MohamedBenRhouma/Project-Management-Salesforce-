@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="craRessources">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+
+        <target>lightning__HomePage</target>
+        <target>lightning__Tab</target>
+        <target>lightning__RecordAction</target> <!-- for object-specific actions in Lightning
+        Experience -->
+        <target>lightning__AppPage</target> <!-- for global actions in Salesforce1 -->
+    </targets>
+</LightningComponentBundle>

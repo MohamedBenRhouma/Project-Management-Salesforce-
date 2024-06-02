@@ -1,0 +1,29 @@
+.slds-select,
+.slds-input {
+    width: 20%;
+    /* Adjust the width as needed */
+    font-size: 1rem;
+    /* Adjust the font size as needed */
+}
+
+.input-field {
+    margin-bottom: 20px;
+    margin-left: 22px;
+    margin-right: 20px;
+    /* Add some space between the fields if needed */
+}
+.input-field1 {
+    margin-bottom: 20px;
+    margin-left: 6px;
+    margin-right: 20px;
+    /* Add some space between the fields if needed */
+}
+.description-input lightning-input {
+    width: 40%;
+        margin-bottom: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+    /* Adjust the width as needed */
+    font-size:1rem;
+    /* Adjust the font size as needed */
+}

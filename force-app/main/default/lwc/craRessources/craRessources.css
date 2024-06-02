@@ -1,0 +1,75 @@
+.card-content {
+    padding: 20px;
+}
+
+.employee-details {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.datepicker {
+    margin-bottom: 20px;
+}
+
+
+.small-datepicker {
+    width: 150px;
+}
+
+
+.custom-input {
+    width: 50%;
+        max-width: 80px;
+      
+        margin: 0 auto;
+       
+        display: block;}
+.grey-column{
+    background-color: rgb(176, 173, 173);
+}
+
+
+
+
+.fl-table {
+border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border: black;
+   
+    background-color: #e6e6e6;
+}
+
+.fl-table td,
+.fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 0.1px solid #b3b3b3;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #142D4C;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #142D4C;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #ffffff;
+}
+.small-picklist {
+    width: 20%;
+    /* Adjust the width according to your preference */
+}

@@ -1,0 +1,12 @@
+<!-- dynamicDataTable.html -->
+<!-- dynamicDataTable.html -->
+<template>
+    <lightning-card title={title} icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" label="Search" placeholder="Type here for search" style="width: 50%;"
+                value={searchTerm} onchange={handleSearchTermChange}></lightning-input>
+        </div>
+        <lightning-datatable key-field="Id" data={filteredData} columns={columns}>
+        </lightning-datatable>
+    </lightning-card>
+</template>
