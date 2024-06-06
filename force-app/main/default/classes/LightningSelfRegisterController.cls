@@ -22,6 +22,7 @@ global class LightningSelfRegisterController {
         }
         return;
     }
+
     
     @AuraEnabled
     public static String selfRegister(String firstname ,String lastname, String email, String password, String confirmPassword, String accountId, String regConfirmUrl, String extraFields, String startUrl, Boolean includePassword) {

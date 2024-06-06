@@ -20,7 +20,7 @@ private class LeadControllerTest {
         Id leadId = LeadController.createLead(leadData);
         Test.stopTest();
 
-        // Retrieve the lead and verify its fields
+        // Retrieve the leaddd and verify its fields
         Lead createdLead = [SELECT Id, FirstName, LastName, Email, Phone, Company, Company_Email__c, CompanyPhone__c, Job_Title__c FROM Lead WHERE Id = :leadId];
         System.assertEquals('Test', createdLead.FirstName);
         System.assertEquals('Lead', createdLead.LastName);
